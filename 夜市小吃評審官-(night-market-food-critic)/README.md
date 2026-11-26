@@ -1,20 +1,7 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 夜市小吃評審官 (Night Market Food Critic)
 
-# Run and deploy your AI Studio app
+台灣夜市小吃多維度 AI 評鑑系統，融合毒舌名廚、暖心部落客與米其林密探三大評審風格。
 
-This contains everything you need to run your app locally.
+完整介紹、功能說明與本機執行步驟請見 repo 根目錄的 [README.md](../README.md)。
 
-View your app in AI Studio: https://ai.studio/apps/43030136-d556-4172-bc53-2db4e3b4cf5a
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+原始 AI Studio 應用程式：https://ai.studio/apps/43030136-d556-4172-bc53-2db4e3b4cf5a
