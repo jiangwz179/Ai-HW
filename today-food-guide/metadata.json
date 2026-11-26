@@ -1,0 +1,6 @@
+{
+  "name": "今日食光導覽員 (TodayFoodGuide AI)",
+  "description": "多模態 AI 外食決策與營養導覽系統 — 用拍照與語音告別「不知道吃什麼」，結合情境語音需求、拍照營養估算、3 選項數位輕推推薦與每週飲食紀錄儀表板。",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
