@@ -94,13 +94,12 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
       <div className="relative w-full max-w-lg bg-[#0e101a] border border-cyan-500/40 rounded-3xl overflow-hidden shadow-2xl flex flex-col">
-        {/* Top Header */}
         <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-slate-900/80">
           <div className="flex items-center space-x-2">
             <Camera className="w-4 h-4 text-cyan-400" />
-            <h3 className="text-sm font-bold tracking-wide text-white">夜市現場小吃採樣相機</h3>
+            <h3 className="text-sm font-bold tracking-wide text-white">拍攝餐點或菜單・多模態影像採樣</h3>
           </div>
           <button
             onClick={onClose}
@@ -110,7 +109,6 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
           </button>
         </div>
 
-        {/* Viewfinder Area */}
         <div className="relative aspect-[4/3] bg-black flex items-center justify-center overflow-hidden">
           {errorMsg ? (
             <div className="p-6 text-center text-slate-400 text-xs">
@@ -118,28 +116,17 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
               <p>{errorMsg}</p>
             </div>
           ) : capturedPreview ? (
-            <img
-              src={capturedPreview}
-              alt="Snapshot preview"
-              className="w-full h-full object-cover"
-            />
+            <img src={capturedPreview} alt="Snapshot preview" className="w-full h-full object-cover" />
           ) : (
             <>
-              <video
-                ref={videoRef}
-                autoPlay
-                playsInline
-                muted
-                className="w-full h-full object-cover"
-              />
-              {/* Neon Target Reticle */}
+              <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" />
               <div className="absolute inset-8 border border-white/20 rounded-2xl pointer-events-none flex flex-col justify-between p-3">
                 <div className="flex justify-between">
                   <div className="w-4 h-4 border-t-2 border-l-2 border-cyan-400" />
                   <div className="w-4 h-4 border-t-2 border-r-2 border-cyan-400" />
                 </div>
-                <div className="text-center text-[10px] tracking-widest text-cyan-400/70 uppercase font-mono">
-                  ✦ FOOD TARGET SCAN ✦
+                <div className="text-center text-[10px] tracking-widest text-cyan-400/80 uppercase font-mono">
+                  ✦ MEAL OR MENU SCAN [7][8] ✦
                 </div>
                 <div className="flex justify-between">
                   <div className="w-4 h-4 border-b-2 border-l-2 border-cyan-400" />
@@ -150,7 +137,6 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
           )}
         </div>
 
-        {/* Control Footer */}
         <div className="p-4 bg-slate-900/90 border-t border-white/10 flex items-center justify-between">
           {!capturedPreview ? (
             <>
@@ -167,7 +153,7 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
               <button
                 type="button"
                 onClick={takeSnapshot}
-                className="w-14 h-14 rounded-full border-4 border-white bg-gradient-to-tr from-pink-500 to-cyan-400 shadow-lg hover:scale-105 active:scale-95 transition flex items-center justify-center cursor-pointer"
+                className="w-14 h-14 rounded-full border-4 border-white bg-gradient-to-tr from-emerald-400 to-cyan-400 shadow-lg hover:scale-105 active:scale-95 transition flex items-center justify-center cursor-pointer"
                 title="按下快門"
               >
                 <div className="w-6 h-6 rounded-full bg-white" />
@@ -194,10 +180,10 @@ export const CameraModal: React.FC<CameraModalProps> = ({ isOpen, onClose, onCap
               <button
                 type="button"
                 onClick={confirmSnapshot}
-                className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-pink-500 to-cyan-500 hover:brightness-110 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-lg transition"
+                className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:brightness-110 text-slate-950 text-xs font-black flex items-center justify-center gap-1.5 shadow-lg transition"
               >
                 <Check className="w-4 h-4" />
-                <span>確認送出審查</span>
+                <span>確認用於分析</span>
               </button>
             </div>
           )}
