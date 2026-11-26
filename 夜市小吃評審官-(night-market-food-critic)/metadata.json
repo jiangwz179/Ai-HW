@@ -1,0 +1,6 @@
+{
+  "name": "夜市小吃評審官 (Night Market Food Critic)",
+  "description": "台灣夜市小吃多維度 AI 評鑑系統，融合毒舌名廚、暖心部落客與米其林密探三大評審風格，提供五維感官雷達圖、熱量罪惡值預估、解膩手搖飲搭配與原聲語音講評。",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
